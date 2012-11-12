@@ -1,0 +1,122 @@
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-11-12 10:30:23 +0100
+Connecting to database specified by database.yml
+Served asset /rails.png - 200 OK (15ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2012-11-12 10:30:26 +0100
+Processing by Rails::InfoController#properties as */*
+  Rendered inline template (16.0ms)
+Completed 200 OK in 68ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2012-11-12 10:30:58 +0100
+Processing by Rails::InfoController#properties as */*
+  Rendered inline template (0.0ms)
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (171.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (93.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateBestellungs (20121112100002)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (15.6ms)[0m  [1mCREATE TABLE "bestellungs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "lStrasse" varchar(255), "lPlz" integer, "lHausnummer" integer, "lOrt" varchar(255), "datum" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121112100002')
+  [1m[36m (156.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateProduktes (20121112100112)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "produktes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121112100112')
+  [1m[36m (124.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateKundes (20121112100342)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "kundes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "vorname" varchar(255), "telnr" integer, "email" varchar(255), "rStrasse" varchar(255), "rPlz" integer, "rOrt" varchar(255), "rHausnummer" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121112100342')
+  [1m[36m (93.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateBestandteiles (20121112100624)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "bestandteiles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "preis" decimal, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121112100624')
+  [1m[36m (171.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateBestellungBestehtAusProduktens (20121112102540)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "bestellung_besteht_aus_produktens" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "stueckzahl" integer, "preisBestellung" decimal, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121112102540')
+  [1m[36m (124.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateBestandteileBwaBestandteiles (20121112103233)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "bestandteile_bwa_bestandteiles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "menge" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121112103233')
+  [1m[36m (93.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("bestandteile_bwa_bestandteiles")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("bestandteiles")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("bestellung_besteht_aus_produktens")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("bestellungs")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("kundes")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("produktes")[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateBestellungs (20121112100002)
+Migrating to CreateProduktes (20121112100112)
+Migrating to CreateKundes (20121112100342)
+Migrating to CreateBestandteiles (20121112100624)
+Migrating to CreateBestellungBestehtAusProduktens (20121112102540)
+Migrating to CreateBestandteileBwaBestandteiles (20121112103233)
+Migrating to AddProduktBildToProduktes (20121112114026)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  ALTER TABLE "produktes" ADD "produktbild" varchar(255)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121112114026')[0m
+  [1m[35m (156.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("bestandteile_bwa_bestandteiles")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("bestandteiles")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("bestellung_besteht_aus_produktens")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("bestellungs")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("kundes")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("produktes")
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-11-12 12:59:03 +0100
+Connecting to database specified by database.yml
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-11-12 15:49:52 +0100
+Connecting to database specified by database.yml
+Served asset /rails.png - 304 Not Modified (15ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2012-11-12 15:50:10 +0100
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Processing by Rails::InfoController#properties as */*
+  Rendered inline template (46.8ms)
+Completed 200 OK in 234ms (Views: 234.0ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-11-12 19:51:49 +0100
+Connecting to database specified by database.yml
+Served asset /rails.png - 304 Not Modified (2ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2012-11-12 19:51:50 +0100
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Processing by Rails::InfoController#properties as */*
+  Rendered inline template (15.6ms)
+Completed 200 OK in 94ms (Views: 93.6ms | ActiveRecord: 0.0ms)
