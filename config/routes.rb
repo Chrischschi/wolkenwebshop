@@ -1,4 +1,11 @@
 WolkenWebShop::Application.routes.draw do
+  get "produkt_katalog/index"
+  post "produkt_katalog/search"
+ # get "produkt_katalog/search"
+  get "home/index"
+
+  root :to => "home#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

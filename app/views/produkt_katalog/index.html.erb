@@ -1,0 +1,31 @@
+<h1>ProduktKatalog#index</h1>
+<p>Find me in app/views/produkt_katalog/index.html.erb</p>
+
+<body> 
+
+
+
+<table border=1> 
+<tr>
+	<th>Produktname</th>
+	<th>Produktbild</th>
+</tr>
+<%  @indexresult.each do |anzeigen|  %> 
+<tr>
+<td><%= "#{anzeigen.name}" %></td>
+<td><%= "#{anzeigen.produktbild}" %></td>
+</tr>
+<% end %> 
+</table>
+
+<br>
+
+<%= form_tag("/produkt_katalog/search",:controller => "ProduktKatalog" , :method => "post") do %>
+  <%= label_tag(:searchinput, "Produktsuche:") %> 
+  <%= text_field_tag(:searchinput)  %> 
+  <%= submit_tag("Suchen") %> 
+<% end %> 
+
+
+
+</body> 

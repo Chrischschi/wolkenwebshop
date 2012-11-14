@@ -1,0 +1,19 @@
+<h1>ProduktKatalog#search</h1>
+<!-- <p>Find me in app/views/produkt_katalog/index.html.erb</p> -->
+
+<body> 
+<%= params %> 
+<table border=1> 
+<tr>
+	<th>Produktname</th>
+	<th>Produktbild</th>
+</tr>
+<%  @searchresult.each do |anzeigen|  %> 
+<tr>
+<td><%= "#{anzeigen.name}" %></td>
+<td><%= "#{anzeigen.produktbild}" %></td>
+</tr>
+<% end %> 
+</table>
+
+</body>
