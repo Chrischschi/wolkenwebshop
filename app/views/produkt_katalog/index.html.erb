@@ -1,31 +1,29 @@
-<h1>ProduktKatalog#index</h1>
-<p>Find me in app/views/produkt_katalog/index.html.erb</p>
+<!-- <p>Find me in app/views/produkt_katalog/index.html.erb</p> -->
 
 <body> 
-
-
-
-<table border=1> 
-<tr>
-	<th>Produktname</th>
-	<th>Produktbild</th>
-</tr>
-<%  @indexresult.each do |anzeigen|  %> 
-<tr>
-<td><%= "#{anzeigen.name}" %></td>
-<td><%= "#{anzeigen.produktbild}" %></td>
-</tr>
-<% end %> 
-</table>
-
-<br>
-
-<%= form_tag("/produkt_katalog/search",:controller => "ProduktKatalog" , :method => "post") do %>
-  <%= label_tag(:searchinput, "Produktsuche:") %> 
-  <%= text_field_tag(:searchinput)  %> 
-  <%= submit_tag("Suchen") %> 
-<% end %> 
-
-
-
+	<div id="Inhalt">
+		<h2>Produktkatalog</h2>
+		<p>Hier finden Sie alle Produkte die wir momentan anbieten:</p>
+		<br>
+		<table> 
+			<%  @indexresult.each do |anzeigen|  %> 
+			<tr>
+				<td><h4><%= "#{anzeigen.name}" %></h4></td>
+			</tr>
+			<tr>
+				<td><img src=<% "/assets/" + "#{anzeigen.produktbild}" %> width="100" height="100" alt=<%= "#{anzeigen.name}" %>></td>
+				<td>beschreibung</td>
+			</tr>
+			<% end %> 
+		</table>
+		<br>
+		<br>
+		<br>
+		<%= form_tag("/produkt_katalog/search",:controller => "ProduktKatalog" , :method => "post") do %>
+		  <%= label_tag(:searchinput, "Produktsuche:") %> 
+		  <%= text_field_tag(:searchinput)  %> 
+		  <%= submit_tag("Suchen") %> 
+		<% end %> 
+	</div>
 </body> 
+
