@@ -1,19 +1,17 @@
-<h1>ProduktKatalog#search</h1>
 <!-- <p>Find me in app/views/produkt_katalog/index.html.erb</p> -->
 
 <body> 
-<%= params %> 
-<table border=1> 
-<tr>
-	<th>Produktname</th>
-	<th>Produktbild</th>
-</tr>
-<%  @searchresult.each do |anzeigen|  %> 
-<tr>
-<td><%= "#{anzeigen.name}" %></td>
-<td><%= "#{anzeigen.produktbild}" %></td>
-</tr>
-<% end %> 
-</table>
-
+	<div id="Inhalt">
+	<h2>Suchergebnisse</h2>
+	<table> 
+		<%  @searchresult.each do |anzeigen|  %> 
+		<tr>
+			<td><h4><%= "#{anzeigen.name}" %></h4></td>
+		</tr>
+		<tr>
+			<td><img src="/assets/<%#{anzeigen.produktbild}%>" width="100" height="100"></td>
+			<td>beschreibung</td>
+		</tr>
+		<% end %> 
+	</table>
 </body>
