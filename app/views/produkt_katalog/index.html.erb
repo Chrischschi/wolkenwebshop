@@ -10,8 +10,8 @@
 			<tr>
 				<td><h4><%= "#{anzeigen.name}" %></h4></td>
 			</tr>
-			<tr>
-				<td><img src=<% "/assets/" + "#{anzeigen.produktbild}" %> width="100" height="100" alt=<%= "#{anzeigen.name}" %>></td>
+			<tr> <!-- wenn der zusammengebaute string angezeigt werden soll, dann %= in ERB verwenden! -->
+				<td><img src=<%= "/assets/" + "#{anzeigen.produktbild}" %> width="100" height="100" alt=<%= "#{anzeigen.name}" %>></td>
 				<td>beschreibung</td>
 			</tr>
 			<% end %> 
