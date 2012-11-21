@@ -11,56 +11,53 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121112114026) do
+ActiveRecord::Schema.define(:version => 20121121092843) do
 
-  create_table "bestandteile_bwa_bestandteiles", :force => true do |t|
-    t.integer  "menge"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "bestandteiles", :force => true do |t|
+  create_table "customers", :force => true do |t|
     t.string   "name"
-    t.decimal  "preis"
+    t.string   "vorname"
+    t.integer  "telnr"
+    t.string   "email"
+    t.string   "rStr"
+    t.integer  "rPlz"
+    t.string   "rOrt"
+    t.integer  "rHausNr"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "passwort"
+    t.boolean  "isAdmin"
+  end
+
+  create_table "orders", :force => true do |t|
+    t.string   "lStrasse"
+    t.integer  "lPlz"
+    t.integer  "lHausnr"
+    t.string   "lOrt"
+    t.date     "datum"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  create_table "bestellung_besteht_aus_produktens", :force => true do |t|
+  create_table "orders_consists_of_parts", :force => true do |t|
     t.integer  "stueckzahl"
     t.decimal  "preisBestellung"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end
 
-  create_table "bestellungs", :force => true do |t|
-    t.string   "lStrasse"
-    t.integer  "lPlz"
-    t.integer  "lHausnummer"
-    t.string   "lOrt"
-    t.date     "datum"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  create_table "kundes", :force => true do |t|
-    t.string   "name"
-    t.string   "vorname"
-    t.integer  "telnr"
-    t.string   "email"
-    t.string   "rStrasse"
-    t.integer  "rPlz"
-    t.string   "rOrt"
-    t.integer  "rHausnummer"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  create_table "produktes", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+  create_table "parts", :force => true do |t|
+    t.decimal  "preis"
+    t.text     "beschreibung"
     t.string   "produktbild"
+    t.string   "name"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "parts_consists_of_parts", :force => true do |t|
+    t.integer  "menge"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end

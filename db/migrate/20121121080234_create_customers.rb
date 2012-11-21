@@ -1,15 +1,16 @@
-class CreateKundes < ActiveRecord::Migration
+class CreateCustomers < ActiveRecord::Migration
   def change
-    create_table :kundes do |t|
-      t.primary_key :id
+    create_table :customers do |t|
+
+	 t.primary_key :id
       t.string :name
       t.string :vorname
       t.integer :telnr
       t.string :email
-      t.string :rStrasse
+      t.string :rStr
       t.integer :rPlz
       t.string :rOrt
-      t.integer :rHausnummer
+      t.integer :rHausNr
 
       t.timestamps
     end
