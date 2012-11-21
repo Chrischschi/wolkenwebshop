@@ -17584,3 +17584,918 @@ ActionController::RoutingError (No route matches [GET] "/assets"):
 
 
   Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-21 08:26:20 +0100
+Connecting to database specified by database.yml
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (15.6ms)
+Compiled application.js  (109ms)  (pid 4300)
+Completed 200 OK in 359ms (Views: 358.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-21 08:26:22 +0100
+Served asset /application.css - 304 Not Modified (24ms)
+
+
+Started GET "/assets/produkt_katalog.css?body=1" for 127.0.0.1 at 2012-11-21 08:26:22 +0100
+Served asset /produkt_katalog.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-11-21 08:26:22 +0100
+Served asset /home.css - 200 OK (3ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-11-21 08:26:22 +0100
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-21 08:26:22 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-21 08:26:22 +0100
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/produkt_katalog.js?body=1" for 127.0.0.1 at 2012-11-21 08:26:22 +0100
+Served asset /produkt_katalog.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-21 08:26:22 +0100
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-21 08:26:29 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/produkt_katalog.css?body=1" for 127.0.0.1 at 2012-11-21 08:26:30 +0100
+Served asset /produkt_katalog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-21 08:26:30 +0100
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-21 08:26:30 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-21 08:26:30 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-11-21 08:26:30 +0100
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/produkt_katalog.js?body=1" for 127.0.0.1 at 2012-11-21 08:26:30 +0100
+Served asset /produkt_katalog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-21 08:26:30 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/produkt_katalog/index" for 127.0.0.1 at 2012-11-21 08:26:39 +0100
+Processing by ProduktKatalogController#index as HTML
+  [1m[36mProdukte Load (0.0ms)[0m  [1mSELECT "produktes".* FROM "produktes" [0m
+  Rendered produkt_katalog/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 187ms (Views: 31.2ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-21 08:26:39 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/produkt_katalog.css?body=1" for 127.0.0.1 at 2012-11-21 08:26:39 +0100
+Served asset /produkt_katalog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-21 08:26:39 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-11-21 08:26:39 +0100
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-21 08:26:39 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-21 08:26:39 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/produkt_katalog.js?body=1" for 127.0.0.1 at 2012-11-21 08:26:39 +0100
+Served asset /produkt_katalog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/Regenwolke.jpg" for 127.0.0.1 at 2012-11-21 08:26:40 +0100
+Served asset /Regenwolke.jpg - 200 OK (62ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-11-21 08:26:40 +0100
+Served asset / - 404 Not Found (15ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started POST "/produkt_katalog/search" for 127.0.0.1 at 2012-11-21 08:27:07 +0100
+Processing by ProduktKatalogController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F4srKqVadnecKZkyUb41OAqh2gE26iCjBCVryP7xER8=", "searchinput"=>"Sommer", "commit"=>"Suchen"}
+  [1m[35mProdukte Load (0.0ms)[0m  SELECT "produktes".* FROM "produktes" WHERE (name LIKE '%Sommer%')
+  Rendered produkt_katalog/search.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 31ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/produkt_katalog.css?body=1" for 127.0.0.1 at 2012-11-21 08:27:07 +0100
+Served asset /produkt_katalog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-21 08:27:07 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-21 08:27:08 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-21 08:27:08 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-11-21 08:27:08 +0100
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/produkt_katalog.js?body=1" for 127.0.0.1 at 2012-11-21 08:27:08 +0100
+Served asset /produkt_katalog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-21 08:27:08 +0100
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-11-21 08:27:08 +0100
+Served asset / - 404 Not Found (15ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/produkt_katalog/index" for 127.0.0.1 at 2012-11-21 08:27:43 +0100
+Processing by ProduktKatalogController#index as HTML
+  [1m[36mProdukte Load (0.0ms)[0m  [1mSELECT "produktes".* FROM "produktes" [0m
+  Rendered produkt_katalog/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-21 08:27:43 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-21 08:27:43 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/produkt_katalog.css?body=1" for 127.0.0.1 at 2012-11-21 08:27:43 +0100
+Served asset /produkt_katalog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-21 08:27:43 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-11-21 08:27:43 +0100
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/produkt_katalog.js?body=1" for 127.0.0.1 at 2012-11-21 08:27:43 +0100
+Served asset /produkt_katalog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-21 08:27:43 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-11-21 08:27:43 +0100
+Served asset / - 404 Not Found (15ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (15.6ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateBestellungs (20121112100002)
+Migrating to CreateProduktes (20121112100112)
+Migrating to CreateKundes (20121112100342)
+Migrating to CreateBestandteiles (20121112100624)
+Migrating to CreateBestellungBestehtAusProduktens (20121112102540)
+Migrating to CreateBestandteileBwaBestandteiles (20121112103233)
+Migrating to AddProduktBildToProduktes (20121112114026)
+Migrating to FuegeBeschreibungZuProdukteHinzu (20121121073755)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121121073755')
+  [1m[36m (265.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("bestandteile_bwa_bestandteiles")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("bestandteiles")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("bestellung_besteht_aus_produktens")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("bestellungs")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("kundes")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("produktes")[0m
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-21 08:45:57 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-21 08:45:57 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-21 08:45:57 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-11-21 08:45:57 +0100
+Served asset /home.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/produkt_katalog.css?body=1" for 127.0.0.1 at 2012-11-21 08:45:57 +0100
+Served asset /produkt_katalog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-21 08:45:58 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-11-21 08:45:58 +0100
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/produkt_katalog.js?body=1" for 127.0.0.1 at 2012-11-21 08:45:58 +0100
+Served asset /produkt_katalog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-21 08:45:58 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/produkt_katalog/index" for 127.0.0.1 at 2012-11-21 08:50:44 +0100
+Processing by ProduktKatalogController#index as HTML
+  [1m[35mProdukte Load (0.0ms)[0m  SELECT "produktes".* FROM "produktes" 
+  Rendered produkt_katalog/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 47ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-21 08:50:45 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-21 08:50:45 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/produkt_katalog.css?body=1" for 127.0.0.1 at 2012-11-21 08:50:45 +0100
+Served asset /produkt_katalog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-11-21 08:50:45 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-21 08:50:45 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-11-21 08:50:45 +0100
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/produkt_katalog.js?body=1" for 127.0.0.1 at 2012-11-21 08:50:45 +0100
+Served asset /produkt_katalog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-21 08:50:45 +0100
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/Regenwolke.jpg" for 127.0.0.1 at 2012-11-21 08:50:45 +0100
+Served asset /Regenwolke.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-11-21 08:50:45 +0100
+Served asset / - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-21 08:50:47 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-21 08:50:47 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/produkt_katalog.css?body=1" for 127.0.0.1 at 2012-11-21 08:50:47 +0100
+Served asset /produkt_katalog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-11-21 08:50:47 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-21 08:50:47 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-21 08:50:47 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-11-21 08:50:47 +0100
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/produkt_katalog.js?body=1" for 127.0.0.1 at 2012-11-21 08:50:47 +0100
+Served asset /produkt_katalog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-21 08:50:47 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/produkt_katalog/index" for 127.0.0.1 at 2012-11-21 08:51:00 +0100
+Processing by ProduktKatalogController#index as HTML
+  [1m[36mProdukte Load (0.0ms)[0m  [1mSELECT "produktes".* FROM "produktes" [0m
+  Rendered produkt_katalog/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 31ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-21 08:51:00 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-11-21 08:51:01 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/produkt_katalog.css?body=1" for 127.0.0.1 at 2012-11-21 08:51:01 +0100
+Served asset /produkt_katalog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-21 08:51:01 +0100
+Served asset /jquery.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-21 08:51:01 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-11-21 08:51:01 +0100
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/produkt_katalog.js?body=1" for 127.0.0.1 at 2012-11-21 08:51:01 +0100
+Served asset /produkt_katalog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-21 08:51:01 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/Regenwolke.jpg" for 127.0.0.1 at 2012-11-21 08:51:01 +0100
+Served asset /Regenwolke.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-11-21 08:51:01 +0100
+Served asset / - 404 Not Found (0ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started POST "/produkt_katalog/search" for 127.0.0.1 at 2012-11-21 08:51:13 +0100
+Processing by ProduktKatalogController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F4srKqVadnecKZkyUb41OAqh2gE26iCjBCVryP7xER8=", "searchinput"=>"Sommer", "commit"=>"Suchen"}
+  [1m[35mProdukte Load (0.0ms)[0m  SELECT "produktes".* FROM "produktes" WHERE (name LIKE '%Sommer%')
+  Rendered produkt_katalog/search.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-11-21 08:51:13 +0100
+Served asset /home.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-21 08:51:13 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/produkt_katalog.css?body=1" for 127.0.0.1 at 2012-11-21 08:51:13 +0100
+Served asset /produkt_katalog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-21 08:51:13 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-21 08:51:13 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-11-21 08:51:13 +0100
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/produkt_katalog.js?body=1" for 127.0.0.1 at 2012-11-21 08:51:14 +0100
+Served asset /produkt_katalog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-21 08:51:14 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-11-21 08:51:14 +0100
+Served asset / - 404 Not Found (15ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateBestellungs (20121112100002)
+Migrating to CreateProduktes (20121112100112)
+Migrating to CreateKundes (20121112100342)
+Migrating to CreateBestandteiles (20121112100624)
+Migrating to CreateBestellungBestehtAusProduktens (20121112102540)
+Migrating to CreateBestandteileBwaBestandteiles (20121112103233)
+Migrating to AddProduktBildToProduktes (20121112114026)
+Migrating to FuegeBeschreibungZuProdukteHinzu (20121121073755)
+Migrating to CreateCustomers (20121121080234)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "customers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "vorname" varchar(255), "telnr" integer, "email" varchar(255), "rStr" varchar(255), "rPlz" integer, "rOrt" varchar(255), "rHausNr" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (15.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121121080234')[0m
+  [1m[35m (171.6ms)[0m  commit transaction
+Migrating to CreateOrders (20121121080324)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (15.6ms)[0m  CREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "lStrasse" varchar(255), "lPlz" integer, "lHausnr" integer, "lOrt" varchar(255), "datum" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121121080324')[0m
+  [1m[35m (109.2ms)[0m  commit transaction
+Migrating to CreateParts (20121121080338)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateBestellungs (20121112100002)
+Migrating to CreateProduktes (20121112100112)
+Migrating to CreateKundes (20121112100342)
+Migrating to CreateBestandteiles (20121112100624)
+Migrating to CreateBestellungBestehtAusProduktens (20121112102540)
+Migrating to CreateBestandteileBwaBestandteiles (20121112103233)
+Migrating to AddProduktBildToProduktes (20121112114026)
+Migrating to FuegeBeschreibungZuProdukteHinzu (20121121073755)
+Migrating to CreateCustomers (20121121080234)
+Migrating to CreateOrders (20121121080324)
+Migrating to CreateParts (20121121080338)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "parts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "preis" decimal, "beschreibung" text, "produktbild" varchar(255), "name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121121080338')[0m
+  [1m[35m (171.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("bestandteile_bwa_bestandteiles")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("bestandteiles")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("bestellung_besteht_aus_produktens")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("bestellungs")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("customers")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("kundes")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("orders")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("parts")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("produktes")[0m
+
+
+Started GET "/" for 127.0.0.1 at 2012-11-21 09:37:18 +0100
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-21 09:37:18 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-11-21 09:37:18 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-11-21 09:37:18 +0100
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/produkt_katalog.css?body=1" for 127.0.0.1 at 2012-11-21 09:37:18 +0100
+Served asset /produkt_katalog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-21 09:37:18 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-21 09:37:18 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/produkt_katalog.js?body=1" for 127.0.0.1 at 2012-11-21 09:37:18 +0100
+Served asset /produkt_katalog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-21 09:37:19 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/produkt_katalog/index" for 127.0.0.1 at 2012-11-21 09:37:21 +0100
+Processing by ProduktKatalogController#index as HTML
+  [1m[36mProdukte Load (0.0ms)[0m  [1mSELECT "produktes".* FROM "produktes" [0m
+  Rendered produkt_katalog/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 47ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-11-21 09:37:22 +0100
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/produkt_katalog.css?body=1" for 127.0.0.1 at 2012-11-21 09:37:22 +0100
+Served asset /produkt_katalog.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-21 09:37:22 +0100
+Served asset /jquery.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-11-21 09:37:22 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2012-11-21 09:37:22 +0100
+Served asset /home.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2012-11-21 09:37:22 +0100
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/produkt_katalog.js?body=1" for 127.0.0.1 at 2012-11-21 09:37:22 +0100
+Served asset /produkt_katalog.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-11-21 09:37:22 +0100
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/Regenwolke.jpg" for 127.0.0.1 at 2012-11-21 09:37:23 +0100
+Served asset /Regenwolke.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/" for 127.0.0.1 at 2012-11-21 09:37:23 +0100
+Served asset / - 404 Not Found (31ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/Ruby193/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateBestellungs (20121112100002)
+Migrating to CreateProduktes (20121112100112)
+Migrating to CreateKundes (20121112100342)
+Migrating to CreateBestandteiles (20121112100624)
+Migrating to CreateBestellungBestehtAusProduktens (20121112102540)
+Migrating to CreateBestandteileBwaBestandteiles (20121112103233)
+Migrating to AddProduktBildToProduktes (20121112114026)
+Migrating to FuegeBeschreibungZuProdukteHinzu (20121121073755)
+Migrating to CreateCustomers (20121121080234)
+Migrating to CreateOrders (20121121080324)
+Migrating to CreateParts (20121121080338)
+Migrating to AddPasswortToCustomers (20121121090239)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  ALTER TABLE "customers" ADD "passwort" varchar(255)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121121090239')[0m
+  [1m[35m (171.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("bestandteile_bwa_bestandteiles")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("bestandteiles")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("bestellung_besteht_aus_produktens")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("bestellungs")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("customers")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("kundes")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("orders")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("parts")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("produktes")[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateBestellungs (20121112100002)
+Migrating to CreateProduktes (20121112100112)
+Migrating to CreateKundes (20121112100342)
+Migrating to CreateBestandteiles (20121112100624)
+Migrating to CreateBestellungBestehtAusProduktens (20121112102540)
+Migrating to CreateBestandteileBwaBestandteiles (20121112103233)
+Migrating to AddProduktBildToProduktes (20121112114026)
+Migrating to FuegeBeschreibungZuProdukteHinzu (20121121073755)
+Migrating to CreateCustomers (20121121080234)
+Migrating to CreateOrders (20121121080324)
+Migrating to CreateParts (20121121080338)
+Migrating to AddPasswortToCustomers (20121121090239)
+Migrating to AddIsAdminToCustomers (20121121090448)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  ALTER TABLE "customers" ADD "isAdmin" boolean
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121121090448')[0m
+  [1m[35m (202.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("bestandteile_bwa_bestandteiles")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("bestandteiles")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("bestellung_besteht_aus_produktens")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("bestellungs")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("customers")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("kundes")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("orders")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("parts")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("produktes")[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateBestellungs (20121112100002)
+Migrating to CreateProduktes (20121112100112)
+Migrating to CreateKundes (20121112100342)
+Migrating to CreateBestandteiles (20121112100624)
+Migrating to CreateBestellungBestehtAusProduktens (20121112102540)
+Migrating to CreateBestandteileBwaBestandteiles (20121112103233)
+Migrating to AddProduktBildToProduktes (20121112114026)
+Migrating to FuegeBeschreibungZuProdukteHinzu (20121121073755)
+Migrating to CreateCustomers (20121121080234)
+Migrating to CreateOrders (20121121080324)
+Migrating to CreateParts (20121121080338)
+Migrating to AddPasswortToCustomers (20121121090239)
+Migrating to AddIsAdminToCustomers (20121121090448)
+Migrating to CreateOrdersConsistsOfParts (20121121090839)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateBestellungs (20121112100002)
+Migrating to CreateProduktes (20121112100112)
+Migrating to CreateKundes (20121112100342)
+Migrating to CreateBestandteiles (20121112100624)
+Migrating to CreateBestellungBestehtAusProduktens (20121112102540)
+Migrating to CreateBestandteileBwaBestandteiles (20121112103233)
+Migrating to AddProduktBildToProduktes (20121112114026)
+Migrating to FuegeBeschreibungZuProdukteHinzu (20121121073755)
+Migrating to CreateCustomers (20121121080234)
+Migrating to CreateOrders (20121121080324)
+Migrating to CreateParts (20121121080338)
+Migrating to AddPasswortToCustomers (20121121090239)
+Migrating to AddIsAdminToCustomers (20121121090448)
+Migrating to CreateOrdersConsistsOfParts (20121121090839)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "orders_consists_of_parts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "stueckzahl" integer, "preisBestellung" decimal, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121121090839')[0m
+  [1m[35m (171.6ms)[0m  commit transaction
+Migrating to CreatePartsConsistsOfParts (20121121091843)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  CREATE TABLE "parts_consists_of_parts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "menge" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121121091843')[0m
+  [1m[35m (124.8ms)[0m  commit transaction
+  [1m[36m (15.6ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("bestandteile_bwa_bestandteiles")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("bestandteiles")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("bestellung_besteht_aus_produktens")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("bestellungs")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("customers")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("kundes")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("orders")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("orders_consists_of_parts")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("parts")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("parts_consists_of_parts")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("produktes")[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddProduktBildToProduktes (20121112114026)
+Migrating to FuegeBeschreibungZuProdukteHinzu (20121121073755)
+Migrating to CreateCustomers (20121121080234)
+Migrating to CreateOrders (20121121080324)
+Migrating to CreateParts (20121121080338)
+Migrating to AddPasswortToCustomers (20121121090239)
+Migrating to AddIsAdminToCustomers (20121121090448)
+Migrating to CreateOrdersConsistsOfParts (20121121090839)
+Migrating to CreatePartsConsistsOfParts (20121121091843)
+Migrating to DestroyOldStuff (20121121092843)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "produktes"
+  [1m[36m (0.0ms)[0m  [1mDROP TABLE "kundes"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "bestandteile_bwa_bestandteiles"
+  [1m[36m (0.0ms)[0m  [1mDROP TABLE "bestandteiles"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "bestellung_besteht_aus_produktes"
+SQLite3::SQLException: no such table: bestellung_besteht_aus_produktes: DROP TABLE "bestellung_besteht_aus_produktes"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddProduktBildToProduktes (20121112114026)
+Migrating to FuegeBeschreibungZuProdukteHinzu (20121121073755)
+Migrating to CreateCustomers (20121121080234)
+Migrating to CreateOrders (20121121080324)
+Migrating to CreateParts (20121121080338)
+Migrating to AddPasswortToCustomers (20121121090239)
+Migrating to AddIsAdminToCustomers (20121121090448)
+Migrating to CreateOrdersConsistsOfParts (20121121090839)
+Migrating to CreatePartsConsistsOfParts (20121121091843)
+Migrating to DestroyOldStuff (20121121092843)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (15.6ms)[0m  DROP TABLE "produktes"
+  [1m[36m (0.0ms)[0m  [1mDROP TABLE "kundes"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "bestandteile_bwa_bestandteiles"
+  [1m[36m (0.0ms)[0m  [1mDROP TABLE "bestandteiles"[0m
+  [1m[35m (0.0ms)[0m  DROP TABLE "bestellung_besteht_aus_produktens"
+  [1m[36m (0.0ms)[0m  [1mDROP TABLE "bestellungs"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121121092843')
+  [1m[36m (187.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("customers")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("orders")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("orders_consists_of_parts")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("parts")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("parts_consists_of_parts")

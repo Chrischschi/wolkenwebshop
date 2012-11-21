@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  menge: 1
+  set_table_name: MyString
+  parts_consists_of_parts: MyString
+
+two:
+  menge: 1
+  set_table_name: MyString
+  parts_consists_of_parts: MyString

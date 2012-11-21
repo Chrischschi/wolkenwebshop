@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class BestellungTest < ActiveSupport::TestCase
+class PartsConsistsOfPartsTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
