@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121121092843) do
+ActiveRecord::Schema.define(:version => 20121121100732) do
 
   create_table "customers", :force => true do |t|
     t.string   "name"
@@ -46,12 +46,12 @@ ActiveRecord::Schema.define(:version => 20121121092843) do
   end
 
   create_table "parts", :force => true do |t|
-    t.decimal  "preis"
+    t.decimal  "preis",        :precision => 7, :scale => 2
     t.text     "beschreibung"
     t.string   "produktbild"
     t.string   "name"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",                                 :null => false
+    t.datetime "updated_at",                                 :null => false
   end
 
   create_table "parts_consists_of_parts", :force => true do |t|
