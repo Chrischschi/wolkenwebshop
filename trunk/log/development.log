@@ -18499,3 +18499,151 @@ Migrating to DestroyOldStuff (20121121092843)
   [1m[35m (0.0ms)[0m  PRAGMA index_list("orders_consists_of_parts")
   [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("parts")[0m
   [1m[35m (0.0ms)[0m  PRAGMA index_list("parts_consists_of_parts")
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/produkt_katalog/index" for 127.0.0.1 at 2012-11-21 10:50:52 +0100
+Processing by ProduktKatalogController#index as HTML
+Completed 500 Internal Server Error in 0ms
+
+NameError (uninitialized constant ProduktKatalogController::Produkte):
+  app/controllers/produkt_katalog_controller.rb:3:in `index'
+
+
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+  Rendered C:/Ruby193/lib/ruby/gems/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (78.0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddProduktBildToProduktes (20121112114026)
+Migrating to FuegeBeschreibungZuProdukteHinzu (20121121073755)
+Migrating to CreateCustomers (20121121080234)
+Migrating to CreateOrders (20121121080324)
+Migrating to CreateParts (20121121080338)
+Migrating to AddPasswortToCustomers (20121121090239)
+Migrating to AddIsAdminToCustomers (20121121090448)
+Migrating to CreateOrdersConsistsOfParts (20121121090839)
+Migrating to CreatePartsConsistsOfParts (20121121091843)
+Migrating to DestroyOldStuff (20121121092843)
+Migrating to PreisV (20121121100732)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddProduktBildToProduktes (20121112114026)
+Migrating to FuegeBeschreibungZuProdukteHinzu (20121121073755)
+Migrating to CreateCustomers (20121121080234)
+Migrating to CreateOrders (20121121080324)
+Migrating to CreateParts (20121121080338)
+Migrating to AddPasswortToCustomers (20121121090239)
+Migrating to AddIsAdminToCustomers (20121121090448)
+Migrating to CreateOrdersConsistsOfParts (20121121090839)
+Migrating to CreatePartsConsistsOfParts (20121121091843)
+Migrating to DestroyOldStuff (20121121092843)
+Migrating to PreisV (20121121100732)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddProduktBildToProduktes (20121112114026)
+Migrating to FuegeBeschreibungZuProdukteHinzu (20121121073755)
+Migrating to CreateCustomers (20121121080234)
+Migrating to CreateOrders (20121121080324)
+Migrating to CreateParts (20121121080338)
+Migrating to AddPasswortToCustomers (20121121090239)
+Migrating to AddIsAdminToCustomers (20121121090448)
+Migrating to CreateOrdersConsistsOfParts (20121121090839)
+Migrating to CreatePartsConsistsOfParts (20121121091843)
+Migrating to DestroyOldStuff (20121121092843)
+Migrating to PreisV (20121121100732)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddProduktBildToProduktes (20121112114026)
+Migrating to FuegeBeschreibungZuProdukteHinzu (20121121073755)
+Migrating to CreateCustomers (20121121080234)
+Migrating to CreateOrders (20121121080324)
+Migrating to CreateParts (20121121080338)
+Migrating to AddPasswortToCustomers (20121121090239)
+Migrating to AddIsAdminToCustomers (20121121090448)
+Migrating to CreateOrdersConsistsOfParts (20121121090839)
+Migrating to CreatePartsConsistsOfParts (20121121091843)
+Migrating to DestroyOldStuff (20121121092843)
+Migrating to PreisV (20121121100732)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddProduktBildToProduktes (20121112114026)
+Migrating to FuegeBeschreibungZuProdukteHinzu (20121121073755)
+Migrating to CreateCustomers (20121121080234)
+Migrating to CreateOrders (20121121080324)
+Migrating to CreateParts (20121121080338)
+Migrating to AddPasswortToCustomers (20121121090239)
+Migrating to AddIsAdminToCustomers (20121121090448)
+Migrating to CreateOrdersConsistsOfParts (20121121090839)
+Migrating to CreatePartsConsistsOfParts (20121121091843)
+Migrating to DestroyOldStuff (20121121092843)
+Migrating to PreisV (20121121100732)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddProduktBildToProduktes (20121112114026)
+Migrating to FuegeBeschreibungZuProdukteHinzu (20121121073755)
+Migrating to CreateCustomers (20121121080234)
+Migrating to CreateOrders (20121121080324)
+Migrating to CreateParts (20121121080338)
+Migrating to AddPasswortToCustomers (20121121090239)
+Migrating to AddIsAdminToCustomers (20121121090448)
+Migrating to CreateOrdersConsistsOfParts (20121121090839)
+Migrating to CreatePartsConsistsOfParts (20121121091843)
+Migrating to DestroyOldStuff (20121121092843)
+Migrating to PreisV (20121121100732)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddProduktBildToProduktes (20121112114026)
+Migrating to FuegeBeschreibungZuProdukteHinzu (20121121073755)
+Migrating to CreateCustomers (20121121080234)
+Migrating to CreateOrders (20121121080324)
+Migrating to CreateParts (20121121080338)
+Migrating to AddPasswortToCustomers (20121121090239)
+Migrating to AddIsAdminToCustomers (20121121090448)
+Migrating to CreateOrdersConsistsOfParts (20121121090839)
+Migrating to CreatePartsConsistsOfParts (20121121091843)
+Migrating to DestroyOldStuff (20121121092843)
+Migrating to PreisV (20121121100732)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  CREATE TEMPORARY TABLE "altered_parts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "preis" decimal, "beschreibung" text, "produktbild" varchar(255), "name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("parts")[0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "parts"
+  [1m[36m (0.0ms)[0m  [1mDROP TABLE "parts"[0m
+  [1m[35m (10.0ms)[0m  CREATE TABLE "parts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "preis" decimal(7,2), "beschreibung" text, "produktbild" varchar(255), "name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("altered_parts")[0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "altered_parts"
+  [1m[36m (0.0ms)[0m  [1mDROP TABLE "altered_parts"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121121100732')
+  [1m[36m (230.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("customers")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("orders")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("orders_consists_of_parts")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("parts")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("parts_consists_of_parts")
+Connecting to database specified by database.yml
