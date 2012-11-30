@@ -1,5 +1,3 @@
-
-
 <body> 
 	<div id="Inhalt">
 	<h2>Suchergebnisse</h2>
@@ -11,8 +9,18 @@
 		<tr>
 		 <!--	<td><img src="/assets/<%#{anzeigen.produktbild}%>" width="100" height="100"></td> --> 
 			<td><img src= <%= "/assets/#{anzeigen.produktbild}" %> width="100" height="100"></td>
-			<td>beschreibung</td>
-		</tr>
+			<td><%= "#{anzeigen.beschreibung}"%></td>
+				<tr>
+				<td>EUR <%= "#{anzeigen.preis}"%></td>
+						<!-- HIER MAL ANSCHAUEN -->
+						<td> 
+							<%= form_tag("/produkt_katalog/index",:controller => "ProduktKatalog" , :method => "post") do %>
+							<%addinput = #{anzeigen.id} %> 
+							<%= submit_tag("In den Warenkorb") %> 
+							<% end %> 
+						</td>
+				</tr>
+			</tr>
 		<% end %> 
 	</table>
 </body>

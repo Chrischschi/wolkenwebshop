@@ -58,3 +58,21 @@ body {
     font-size: 1em;
     margin: 1em 0;
   }
+  
+  div#Warenkorb {
+    font-size: 0.9em;
+    float: right; width: 12em;
+    margin: 0; padding: 0;
+    border: 1px dashed silver; background-color: white;
+  }
+  div#Warenkorb strong {
+    font-size: 1.33em;
+    margin: 0.2em 0.5em;
+  }
+  div#Warenkorb p {
+    font-size: 1em;
+    margin: 0.5em;
+  }
+
+  
+  
