@@ -8,14 +8,33 @@
 </head>
 <body>
 	<h1>WebShop</h1>
-
+	<br>
 
 	<ul id="Navigation">
 		<li><%= link_to 'Startseite', "http://localhost:3000/"%></li>
 		<li><%= link_to 'Produkt-Katalog', "/produkt_katalog/index"%></li>
+		<li><%= link_to 'Mein Warenkorb', "http://localhost:3000/"%></li>
 	</ul>
-
+	
+	<div id="Warenkorb">
+		<h3> Login-Bereich </h3>
+		<br>
+		
+		<h3> Warenkorb </h3>
+		<hr>
+		<li> Produkt 1 </li>
+		<li> Produkt 2 </li>
+		<br>
+		Summe: 
+		<br>
+		<br>
+		<%= link_to 'Zur Kasse', "http://localhost:3000/"%>
+	</div>
+	
 <%= yield %>
 
 </body>
+
+
+
 </html>

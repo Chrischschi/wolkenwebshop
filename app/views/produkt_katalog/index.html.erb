@@ -1,5 +1,3 @@
-<!-- <p>Find me in app/views/produkt_katalog/index.html.erb</p> -->
-
 <body> 
 	<div id="Inhalt">
 		<h2>Produktkatalog</h2>
@@ -7,13 +5,24 @@
 		<br>
 		<table> 
 			<%  @indexresult.each do |anzeigen|  %> 
-			<tr>
-				<td><h4><%= "#{anzeigen.name}" %></h4></td>
-			</tr>
-			<tr> <!-- wenn der zusammengebaute string angezeigt werden soll, dann %= in ERB verwenden! -->
-				<td><img src=<%= "/assets/" + "#{anzeigen.produktbild}" %> width="100" height="100" alt=<%= "#{anzeigen.name}" %>></td>
-				<td>beschreibung</td>
-			</tr>
+				<tr>
+					<td><h4><%= "#{anzeigen.name}" %></h4></td>
+				</tr>
+				<tr> <!-- wenn der zusammengebaute string angezeigt werden soll, dann %= in ERB verwenden! -->
+					<td><img src=<%= "/assets/" + "#{anzeigen.produktbild}" %> width="100" height="100" alt=<%= "#{anzeigen.name}" %>></td>
+					<td><%= "#{anzeigen.beschreibung}"%></td>
+					<tr>
+						<td>EUR <%= "#{anzeigen.preis}"%></td>
+						<!-- HIER MAL ANSCHAUEN -->
+						<td> 
+							<%= form_tag("/produkt_katalog/index",:controller => "ProduktKatalog" , :method => "post") do %>
+							<%addinput = #{anzeigen.id} %> 
+							<%= submit_tag("In den Warenkorb") %> 
+							<% end %> 
+						</td>
+						
+					</tr>
+				</tr>
 			<% end %> 
 		</table>
 		<br>

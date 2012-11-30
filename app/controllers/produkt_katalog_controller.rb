@@ -1,12 +1,12 @@
 class ProduktKatalogController < ApplicationController
   def index
-    @indexresult =  Produkte.all
+    @indexresult =  Parts.all
   end
 
   def search 
   	searchinput = params[:searchinput]
 
-  	@searchresult = Produkte.where("name LIKE '%#{searchinput}%'")
+  	@searchresult = Parts.where("name LIKE '%#{searchinput}%'")
   end
 
 
