@@ -6,6 +6,7 @@ WolkenWebShop::Application.routes.draw do
   post "produkt_katalog/search"
   post "produkt_katalog/add"
   post "home/index"
+  post "kasse/buy"
   get "home/index"
 
   root :to => "home#index"
