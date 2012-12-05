@@ -21,9 +21,9 @@
 		<br>
 		
 		<h3> Warenkorb </h3>
-		<hr>
-		<li> Produkt 1 </li>
-		<li> Produkt 2 </li>
+		<%  @warenkorbListe.each do |element|  %> 
+       <li> <%= "#{element}" %> </li>
+    <% end %>
 		<br>
 		Summe: 
 		<br>
