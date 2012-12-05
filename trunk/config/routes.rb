@@ -2,6 +2,7 @@ WolkenWebShop::Application.routes.draw do
   get "produkt_katalog/index"
   post "produkt_katalog/index"
   post "produkt_katalog/search"
+  post "produkt_katalog/add"
   post "home/index"
   get "home/index"
 
