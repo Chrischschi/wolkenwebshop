@@ -1,0 +1,22 @@
+
+
+<body> 
+<h2>Bestellung bestätigen</h2>
+
+Bitte tragen Sie Ihre Lieferadresse ein:
+<%= form_tag("/kasse/buy",:controller => "Kasse" , :method => "post") do %>
+  <%= label_tag(:str, "Straße:") %> 
+  <%= text_field_tag(:str)  %>
+  <%= label_tag(:hnr, "Hausnummer:") %> 
+  <%= text_field_tag(:hnr)  %>
+  <br>
+  <%= label_tag(:plz, "Postleitzahl:") %> 
+  <%= text_field_tag(:plz)  %> 
+  <%= label_tag(:ort, "Ort:") %> 
+  <%= text_field_tag(:ort)  %> 
+  <%= submit_tag("Kaufen") %> 
+<% end %> 
+
+
+
+</body> 
