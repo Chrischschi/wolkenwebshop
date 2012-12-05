@@ -1,4 +1,6 @@
 WolkenWebShop::Application.routes.draw do
+  get "kasse/index"
+
   get "produkt_katalog/index"
   post "produkt_katalog/index"
   post "produkt_katalog/search"
