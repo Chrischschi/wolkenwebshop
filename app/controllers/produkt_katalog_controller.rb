@@ -9,5 +9,10 @@ class ProduktKatalogController < ApplicationController
   	@searchresult = Parts.where("name LIKE '%#{searchinput}%'")
   end
 
+  def add
+    addinput = params[:addinput]
+    
+    @warenkorbListe << addinput
+  end 
 
 end
