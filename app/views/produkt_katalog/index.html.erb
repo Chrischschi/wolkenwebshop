@@ -4,6 +4,7 @@
 		<p>Hier finden Sie alle Produkte die wir momentan anbieten:</p>
 		<br>
 		<table> 
+			<% addinput = nil %> 
 			<%  @indexresult.each do |anzeigen|  %> 
 				<tr>
 					<td><h4><%= "#{anzeigen.name}" %></h4></td>
@@ -15,9 +16,10 @@
 						<td>EUR <%= "#{anzeigen.preis}"%></td>
 						<!-- HIER MAL ANSCHAUEN -->
 						<td> 
-							<%= form_tag("/produkt_katalog/add",:controller => "ProduktKatalog" , :method => "post") do %>
-							<%addinput = #{anzeigen.id} %> 
-							<%= submit_tag("In den Warenkorb") %> 
+							<%= form_tag("/produkt_katalog/add",:controller => "ProduktKatalog" , :method => "post") do %> 
+							<%= hidden_field_tag "addinput",  anzeigen.id %> 
+							<%= submit_tag "In den Warenkorb"  %> 
+							
 							<% end %> 
 						</td>
 						

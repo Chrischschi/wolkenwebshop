@@ -11,8 +11,15 @@ class ProduktKatalogController < ApplicationController
 
   def add
     addinput = params[:addinput]
+    puts "WAS IM ADD-INPUT DRIN STEHT: #{addinput}"
+    product =  Parts.find(addinput)
+    name = product.name 
+    preis = product.preis
+
+    s = Struct.new("Ware",:name,:preis)
+    elem = s.new(name,preis)
     
-    @warenkorbListe << addinput
+    $warenkorbListe << elem
   end 
 
 end

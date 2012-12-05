@@ -21,11 +21,13 @@
 		<br>
 		
 		<h3> Warenkorb </h3>
-		<%  @warenkorbListe.each do |element|  %> 
-       <li> <%= "#{element}" %> </li>
+		<% sum = 0 %> 
+		<%  $warenkorbListe.each do |element|  %> 
+			<% sum += element.preis %> 
+       <li> <%= "#{element.name}: #{element.preis} €" %> </li>
     <% end %>
 		<br>
-		Summe: 
+		Summe: <%= sum   %> €  
 		<br>
 		<br>
 		<%= link_to 'Zur Kasse', "http://localhost:3000/"%>
