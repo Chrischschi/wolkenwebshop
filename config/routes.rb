@@ -9,6 +9,11 @@ WolkenWebShop::Application.routes.draw do
   post "kasse/buy"
   get "home/index"
 
+  get "user/index"
+  get "user/pba"
+  post "user/erg_expgl"
+  post "user/erg_gam"
+
   root :to => "home#index"
 
   # The priority is based upon order of creation:

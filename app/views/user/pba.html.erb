@@ -1,0 +1,35 @@
+<body>
+<div id="Inhalt">
+Primaerbedarfs-Anaylse
+<br>
+Mit Exponentieller Glättung: 
+<%= form_tag("./erg_expgl",:controller => "User" , :method => "post") do %>
+  <%= label_tag(:lPB, "Planbedarf des letzten Monats") %> 
+  <%= text_field_tag(:lPB)  %>
+  <br>
+  <%= label_tag(:lB, "Ist-Bedarf des letzten Monats:") %> 
+  <%= text_field_tag(:lB)  %>
+  <br>
+  <%= label_tag(:alpha, "Glättungsfaktor:") %> 
+  <%= text_field_tag(:alpha)  %> 
+  <%= submit_tag("Berechnen") %> 
+  <% end %> 
+
+<br>
+
+Mit Gleitendem Arithmetischem Mittel:
+<br>
+<%= form_tag("./erg_gam",:controller => "User" , :method => "post") do %>
+  <%= label_tag(:b1, "Ist-Bedarf des letzten Monats:") %> 
+  <%= text_field_tag(:b1)  %>
+  <br>
+  <%= label_tag(:b2, "Ist-Bedarf des vorletzten Monats:") %> 
+  <%= text_field_tag(:b2)  %>
+  <br>
+  <%= label_tag(:b3, "Ist-Bedarf des vorvorletzten Monats:") %> 
+  <%= text_field_tag(:b3)  %> 
+  <%= submit_tag("Berechnen") %> 
+<% end %>
+
+</div>
+</body>  
