@@ -1,0 +1,25 @@
+<body>
+<div id="Inhalt">
+<h2> ABC-Analyse: Ergebnis </h2> 
+<br> 
+
+     <% @e_abc_an.each_key do |kategorie| %>
+	<br> 
+	<%= "#{kategorie}-Güter" %> 
+     <table> 
+  	<tr> 
+		<th> Artikel </th> <th> Wert in € </th>  
+	</tr> 
+		<% @e_abc_an[kategorie].each do |gut| %> 	 
+		<tr> 
+		    <td> <%= gut.name %> </td> 
+		    <td> <%= gut.preis %> </td>   
+		</tr> 
+		<% end %>	
+ 	
+     </table> 
+     <% end %> 
+
+ 	
+</body> 
+	

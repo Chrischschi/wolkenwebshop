@@ -14,6 +14,11 @@ WolkenWebShop::Application.routes.draw do
   post "user/erg_expgl"
   post "user/erg_gam"
 
+  # 10.12.2012 	
+  get "user/abc_an"	
+  get "user/erg_abc_an"		
+   	
+
   root :to => "home#index"
 
   # The priority is based upon order of creation:
