@@ -16,7 +16,11 @@ WolkenWebShop::Application.routes.draw do
 
   # 10.12.2012 	
   get "user/abc_an"	
-  get "user/erg_abc_an"		
+  get "user/erg_abc_an"
+
+  # 11.12.2012
+  get "user/stueckliste"
+  post "user/erg_stueckliste" 		
    	
 
   root :to => "home#index"
