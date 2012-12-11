@@ -5,8 +5,11 @@
 
     <% @e_stueckliste.each_key do |k| %>  
     <% stuecke = "" %> 
-    <% if !(@e_stueckliste[k] == nil) then @e_stueckliste[k].each  { |zahl,stueck| stuecke += zahl.to_s; stuecke += " " ; stuecke += stueck ; stuecke += ", "   } ; end %> 
-   <%= k   + "=" + stuecke %> 
+   	<% if !(@e_stueckliste[k] == nil) then @e_stueckliste[k].each { |zahl,stueck| %>
+   	<%  stuecke += zahl.to_s; stuecke += " " ; stuecke += stueck ; stuecke += " "   } %>
+	<% else stuecke = "einzelteil" %> 
+  	<% end %> 
+   <%= k   + " = " + stuecke %> 
    <br> 
    <% end %> 
 

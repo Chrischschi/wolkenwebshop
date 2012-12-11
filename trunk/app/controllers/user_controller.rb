@@ -48,25 +48,28 @@ class UserController < ApplicationController
 
 		if subparts.empty? then return {name => nil}
 		else 
-				subparts.each do |elem| 
+			     	subparts.each do |elem| 
 				result[name] << [ elem.menge , Parts.find(elem.unterteilID).name ] 
-				puts result[name]
+				puts  "" + result[name].to_s 
 				end 
 
-				subparts.reduce ({})  do |accu,element| 
-					
-					result.merge(stueckliste_aufloesen(element.unterteilID)) {|rkey,roldval,rnewval| roldval }  
+			subparts_structure = subparts.reduce ({})  do |accu,element| 
 
+					
+				        accu.merge(stueckliste_aufloesen(element.unterteilID)) 
+					
 
 			    end	
 
 				#subparts.each do |element|
 			#		result.merge(stueckliste_aufloesen(element.unterteilID))
 			#	end
-
-	
+			result.merge(subparts_structure) 
+			
 		end
-
+		
+		
+		
 
 
 	end  
