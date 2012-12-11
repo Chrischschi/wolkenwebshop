@@ -1,0 +1,15 @@
+<body>
+<div id="Inhalt">
+<h2> Stueckliste für Produkt </h2> 
+<br> 
+
+    <% @e_stueckliste.each_key do |k| %>  
+    <% stuecke = "" %> 
+    <% if !(@e_stueckliste[k] == nil) then @e_stueckliste[k].each  { |zahl,stueck| stuecke += zahl.to_s; stuecke += " " ; stuecke += stueck ; stuecke += ", "   } ; end %> 
+   <%= k   + "=" + stuecke %> 
+   <br> 
+   <% end %> 
+
+ 	
+</body> 
+	

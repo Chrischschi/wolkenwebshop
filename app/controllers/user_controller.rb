@@ -27,6 +27,55 @@ class UserController < ApplicationController
 	 gueter = Parts.where(:isProduct => false ) 
 	 @e_abc_an =  ABCAnalyse.abc_analyse_parts(gueter) 
 	end 
+
+	def stueckliste
+		
+	end 
+
+	def erg_stueckliste
+	 id = Parts.find_by_name(params[:produktname]).id
+	  @e_stueckliste = 	stueckliste_aufloesen(id)
+	end
+
+	#private
+
+	def stueckliste_aufloesen(teilID)
+		result = {} 
+		part = Parts.find(teilID) 
+		name = part.name 
+		result[name] = []
+		subparts = PartsConsistsOfParts.where(:oberteilID => teilID)
+
+		if subparts.empty? then return {name => nil}
+		else 
+				subparts.each do |elem| 
+				result[name] << [ elem.menge , Parts.find(elem.unterteilID).name ] 
+				puts result[name]
+				end 
+
+				subparts.reduce ({})  do |accu,element| 
+					
+					result.merge(stueckliste_aufloesen(element.unterteilID)) {|rkey,roldval,rnewval| roldval }  
+
+
+			    end	
+
+				#subparts.each do |element|
+			#		result.merge(stueckliste_aufloesen(element.unterteilID))
+			#	end
+
+	
+		end
+
+
+
+	end  
+
+	def st(teilID)
+	 stueckliste_aufloesen(teilID)
+	end	
+		
+		
 	 
 	
 

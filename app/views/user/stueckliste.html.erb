@@ -1,1 +1,21 @@
-TODO
+<body> 
+<div  id = "Inhalt" >
+
+Stückliste: 
+<br> 
+Bitte Produkt auswählen: 
+
+<%= form_tag("./erg_stueckliste",:controller => "User" , :method => "post") do %>
+
+		  <%= label_tag(:produktname, "Produktsuche:") %> 
+
+		  <%= text_field_tag(:produktname)  %> 
+		  <%= submit_tag("Suchen") %> 
+		<% end %> 
+
+
+</div> 
+
+</body> 
+
+
