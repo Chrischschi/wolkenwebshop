@@ -1,6 +1,6 @@
 class ProduktKatalogController < ApplicationController
   def index
-    @indexresult =  Parts.all
+    @indexresult =  Parts.where(:isProduct => true)
   end
 
   def search 
@@ -21,5 +21,6 @@ class ProduktKatalogController < ApplicationController
     
     $warenkorbListe << elem
   end 
+   
 
 end
