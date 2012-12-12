@@ -12,10 +12,9 @@
 			<td><%= "#{anzeigen.beschreibung}"%></td>
 				<tr>
 				<td>EUR <%= "#{anzeigen.preis}"%></td>
-						<!-- HIER MAL ANSCHAUEN -->
 						<td> 
 							<%= form_tag("/produkt_katalog/index",:controller => "ProduktKatalog" , :method => "post") do %>
-							<%addinput = #{anzeigen.id} %> 
+							<% addinput = "#{anzeigen.id}" %> 
 							<%= submit_tag("In den Warenkorb") %> 
 							<% end %> 
 						</td>
