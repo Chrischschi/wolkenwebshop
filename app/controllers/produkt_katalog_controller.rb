@@ -6,7 +6,8 @@ class ProduktKatalogController < ApplicationController
   def search 
   	searchinput = params[:searchinput]
 
-  	@searchresult = Parts.where("name LIKE '%#{searchinput}%'")
+
+  	@searchresult = Parts.where("name LIKE '%#{searchinput}%' AND isProduct = 't'")
   end
 
   def add
