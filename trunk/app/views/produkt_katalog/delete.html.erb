@@ -1,0 +1,10 @@
+<body> 
+	<div id ="Inhalt"> 
+		Produkt <%= @deleted.name %> wurde gelöscht! 
+
+		<%= form_tag("/produkt_katalog/index",:controller => "ProduktKatalog" , :method => "post") do %>
+		<%= submit_tag("OK") %>
+		<% end %> 
+
+	</div> 
+<body> 

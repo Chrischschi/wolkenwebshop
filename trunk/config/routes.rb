@@ -20,10 +20,15 @@ WolkenWebShop::Application.routes.draw do
 
   # 11.12.2012
   get "user/stueckliste"
-  post "user/erg_stueckliste" 		
+  post "user/erg_stueckliste" 	
+
+  #	12.12.2012
+  post "produkt_katalog/delete"
    	
 
   root :to => "home#index"
+
+  match "produkt_katalog/delete" => "ProduktKatalog#delete", :as => :delete
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -22,6 +22,10 @@ class ProduktKatalogController < ApplicationController
     
     $warenkorbListe << elem
   end 
-   
+
+  def delete
+      deleteIndex = params[:deleteInput].to_i
+      @deleted = $warenkorbListe.delete_at(deleteIndex)
+   end 
 
 end
