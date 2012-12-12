@@ -22,12 +22,23 @@
 		
 		<h3> Warenkorb </h3>
 		<% sum = 0 %> 
-		<%  $warenkorbListe.each do |element|  %> 
+		<%  $warenkorbListe.each_with_index do |element,index|  %> 
 			<% sum += element.preis %> 
-       <li> <%= "#{element.name}: #{element.preis} €" %> </li>
+       <li> <!-- <%= "#{element.name}: #{element.preis} €" %> --> 
+       			<%= form_tag("/produkt_katalog/delete",:controller => "ProduktKatalog" , :method => "post") do %> 
+       			<%= "#{element.name}: #{element.preis} €" %>
+				<%= hidden_field_tag "deleteInput",  index %> 
+				<%= submit_tag("-") %>
+				<% end %>
+				
+				
+				
+
+
+       </li>
     <% end %>
 		<br>
-		Summe: <%= sum   %> €  
+		Summe: <%= sum  %> €  
 		<br>
 		<br>
 		<%= link_to 'Zur Kasse', "http://localhost:3000/kasse/index"%>

@@ -43,10 +43,11 @@ body {
   }
 
   div#Inhalt {
-    margin: 0 12em 1em 16em;
+    margin: 0 15em 1em 16em;
     padding: 0 1em;
     border: 1px dashed silver;
   }
+
   * html div#Inhalt {
     height: 1em; 
   }
@@ -61,7 +62,7 @@ body {
   
   div#Warenkorb {
     font-size: 0.9em;
-    float: right; width: 12em;
+    float: right; width: 15em;
     margin: 0; padding: 0;
     border: 1px dashed silver; background-color: white;
   }
