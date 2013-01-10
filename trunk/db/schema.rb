@@ -11,7 +11,43 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121205131024) do
+ActiveRecord::Schema.define(:version => 20130110122641) do
+
+  create_table "auftrags", :primary_key => "TNr", :force => true do |t|
+    t.date     "Datum"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "auftrags", ["TNr", "Datum"], :name => "sqlite_autoindex_auftrags_1", :unique => true
+
+  create_table "bedarfs", :primary_key => "TNr", :force => true do |t|
+    t.date     "Datum"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "bedarfs", ["TNr", "Datum"], :name => "sqlite_autoindex_bedarfs_1", :unique => true
+
+  create_table "bedarfsableitungs", :primary_key => "AuTNr", :force => true do |t|
+    t.integer  "BeTNr"
+    t.date     "AuDatum"
+    t.date     "BeDatum"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "bedarfsableitungs", ["AuTNr", "BeTNr", "BeDatum", "AuDatum"], :name => "sqlite_autoindex_bedarfsableitungs_1", :unique => true
+
+  create_table "bedarfsdeckungs", :primary_key => "AuTNr", :force => true do |t|
+    t.integer  "BeTNr"
+    t.date     "AuDatum"
+    t.date     "BeDatum"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "bedarfsdeckungs", ["AuTNr", "BeTNr", "BeDatum", "AuDatum"], :name => "sqlite_autoindex_bedarfsdeckungs_1", :unique => true
 
   create_table "customers", :force => true do |t|
     t.string   "name"
@@ -28,10 +64,27 @@ ActiveRecord::Schema.define(:version => 20121205131024) do
     t.boolean  "isAdmin"
   end
 
-  create_table "may_orders", :id => false, :force => true do |t|
-    t.integer "customerID"
+  create_table "lagerdeckungs", :primary_key => "LNr", :force => true do |t|
+    t.integer  "TNr"
+    t.date     "Datum"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "lagerdeckungs", ["LNr", "TNr"], :name => "sqlite_autoindex_lagerdeckungs_1", :unique => true
+
+  create_table "lagers", :force => true do |t|
+    t.integer  "LNr"
+    t.integer  "TNr"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "may_orders", :primary_key => "customerID", :force => true do |t|
     t.integer "orderID"
   end
+
+  add_index "may_orders", ["customerID", "orderID"], :name => "sqlite_autoindex_may_orders_1", :unique => true
 
   create_table "orders", :force => true do |t|
     t.string   "lStrasse"
@@ -43,12 +96,13 @@ ActiveRecord::Schema.define(:version => 20121205131024) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "orders_consists_of_parts", :force => true do |t|
-    t.integer  "stueckzahl"
-    t.decimal  "preisBestellung"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+  create_table "orders_consists_of_parts", :primary_key => "orderID", :force => true do |t|
+    t.integer "partID"
+    t.integer "stueckzahl"
+    t.decimal "preisBestellung", :precision => 7, :scale => 2
   end
+
+  add_index "orders_consists_of_parts", ["orderID", "partID"], :name => "sqlite_autoindex_orders_consists_of_parts_1", :unique => true
 
   create_table "parts", :force => true do |t|
     t.decimal  "preis",        :precision => 7, :scale => 2
@@ -60,10 +114,13 @@ ActiveRecord::Schema.define(:version => 20121205131024) do
     t.boolean  "isProduct",                                  :default => false, :null => false
   end
 
-  create_table "parts_consists_of_parts", :force => true do |t|
+  create_table "parts_consists_of_parts", :primary_key => "oberteilID", :force => true do |t|
+    t.integer  "unterteilID"
     t.integer  "menge"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
+
+  add_index "parts_consists_of_parts", ["oberteilID", "unterteilID"], :name => "sqlite_autoindex_parts_consists_of_parts_1", :unique => true
 
 end
