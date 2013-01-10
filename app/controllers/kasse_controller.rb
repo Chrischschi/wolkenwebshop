@@ -36,19 +36,21 @@ class KasseController < ApplicationController
   end
   	#Trägt bestellung in Auftragsverfolgung ein
     def trackOrder(order,productsOfOrder)
-    	EINE_WOCHE_SPÄTER = 7 # einfach  Date + 7
+    	eINE_WOCHE_SPAETER = 7 # einfach  Date + 7
     	orderDatum = order.datum
 
     	productsOfOrder.each do |produkt|
     	
    
-    	createDemand(order,orderDatum + EINE_WOCHE_SPÄTER)
+    	createDemand(produkt,orderDatum + eINE_WOCHE_SPAETER)
 
-    	# fulfillDemand(bedarf,orderDatum + EINE_WOCHE_SPÄTER)
+    	# fulfillDemand(bedarf,orderDatum + EINE_WOCHE_SPAETER)
     	end 
     end	
 
     def createDemand(teil,datum)
+
+
     	bedarf = Bedarf.new({:TNr => teil.id , :Datum => datum }) #losbildung für Aufträge mit selbem lieferdatum
     	bedarf.save
 
@@ -59,15 +61,13 @@ class KasseController < ApplicationController
     def fulfillDemand(bedarf, datum)
     	auftrag = erstelleAuftrag(bedarf,datum)
     	
-    	bedarfsDeckung = BedarfsDeckung.new({ AuTNr:(auftrag.TNr) , BeTNr:(bedarf.TNr) , AuDatum:(auftrag.Datum) , BeDatum:(bedarf.Datum) })
+    	bedarfsDeckung = Bedarfsdeckung.new({ AuTNr:(auftrag.TNr) , BeTNr:(bedarf.TNr) , AuDatum:(auftrag.Datum) , BeDatum:(bedarf.Datum) })
     	bedarfsDeckung.save
-
-
 
     end	
 
     def erstelleAuftrag(auftrag,datum)
-    	auftrag = Auftrag.new({:TNr => auftrag.TNr, :Datum => datum}) 
+    	auftrag = Auftrag.new({:TNr => auftrag.TNr, :Datum => datum}) ## Irgendwann gibt dieser befehl einfach nur true zurück
     	auftrag.save
 
     	leiteBedarfeAb(auftrag,datum - 1 ) # Jetzt kommt die Vorlaufsverschiebung rein, beim ableiten von Bedarfen! 
@@ -79,21 +79,44 @@ class KasseController < ApplicationController
 
 
 
-    	unterteile = PartsConsistsOfParts.where(:oberteilID => auftrag.TNr)
+    	unterteile = PartsConsistsOfParts.where(:oberteilID => auftrag.TNr) # Erst die Abfrage
 
-    #	if (unterteile.empty?) then return; 
-    #	else 
-    		unterteile.each do |t| 
+        subParts = unterteile.reduce ([]) {|accu,elem| accu + [Parts.find(elem.unterteilID)] }
+
+        puts "------------"
+        puts "SubParts:"
+        subParts.each  {|x| puts x.name  }
+        puts "------------"
+
+    	
+        if (!unterteile.empty?)  
+    	 
+    		subParts.each do |t| 
     			bedarf = createDemand(t, datum ) 
-    			bedarfsAbleitung =  BedarfsAbleitung.new({ AuTNr:(auftrag.TNr) , BeTNr:(bedarf.TNr) , AuDatum:(auftrag.Datum) , BeDatum:(bedarf.Datum) })
+
+                puts "--------"
+                puts "auftragTNr:"
+                puts auftrag.TNr 
+                puts "--------"
+
+                
+
+    			bedarfsAbleitung =  Bedarfsableitung.new({
+
+                 :AuTNr => (auftrag.TNr) , 
+                 :BeTNr => (bedarf.TNr) ,
+                  :AuDatum => (auftrag.Datum) ,
+                   :BeDatum => (bedarf.Datum) })
 
 	    		bedarfsAbleitung.save
 
     		end	
-    #	end 	
+
+        else return;     
+    	end 	
 
 
-    
+        
 
 
     end 	
