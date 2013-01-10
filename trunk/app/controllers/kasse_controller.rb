@@ -36,6 +36,8 @@ class KasseController < ApplicationController
   end
   	#Trägt bestellung in Auftragsverfolgung ein
     def trackOrder(order,productsOfOrder)
+        require 'debugger' ; debugger
+
     	eINE_WOCHE_SPAETER = 7 # einfach  Date + 7
     	orderDatum = order.datum
 
