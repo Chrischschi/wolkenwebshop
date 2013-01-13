@@ -53,10 +53,19 @@ class KasseController < ApplicationController
     def createDemand(teil,datum)
 
 
-    	bedarf = Bedarf.new({:TNr => teil.id , :Datum => datum }) #losbildung für Aufträge mit selbem lieferdatum
-    	bedarf.save
+       
+            bedarf = Bedarf.new({:TNr => teil.id , :Datum => datum }) #losbildung für Aufträge mit selbem lieferdatum
+             if !(Bedarf.exists?(:TNr => teil.id , :Datum => datum ) ) # wenn schon ein auftrag dafür existiert, dann braucht man keinen mehr. 
+               bedarf.save  
+             end
+
+    	
 
     	fulfillDemand(bedarf,datum)
+
+        bedarf ## Der Bedarf soll zurückkommen und ob die BedarfsDeckung erfolgreich gespeichert wurde! 
+
+
     end 	
 
     #Trägt Bedarfsdeckungen für teil an einem datum  ein. 
@@ -64,14 +73,25 @@ class KasseController < ApplicationController
     	auftrag = erstelleAuftrag(bedarf,datum)
     	
     	bedarfsDeckung = Bedarfsdeckung.new({ AuTNr:(auftrag.TNr) , BeTNr:(bedarf.TNr) , AuDatum:(auftrag.Datum) , BeDatum:(bedarf.Datum) })
-    	bedarfsDeckung.save
+    	    if !(Bedarfsdeckung.exists?( {
+                    :AuTNr => (auftrag.TNr) , 
+                    :BeTNr => (bedarf.TNr) ,
+                    :AuDatum => (auftrag.Datum) ,
+                    :BeDatum => (bedarf.Datum) }
+                    ) 
+                ) 
+                bedarfsDeckung.save
+            end     
+
 
     end	
 
-    def erstelleAuftrag(auftrag,datum)
-    	auftrag = Auftrag.new({:TNr => auftrag.TNr, :Datum => datum}) ## Irgendwann gibt dieser befehl einfach nur true zurück
-    	auftrag.save
+    def erstelleAuftrag(auftrag,datum) #ist der parameter auftrag hier wirklich ein auftrag? 
 
+    	auftrag = Auftrag.new({:TNr => auftrag.TNr, :Datum => datum}) 
+        if !(Auftrag.exists?({:TNr =>  auftrag.TNr , :Datum => datum }))
+    	auftrag.save
+        end 
     	leiteBedarfeAb(auftrag,datum - 1 ) # Jetzt kommt die Vorlaufsverschiebung rein, beim ableiten von Bedarfen! 
 
     	auftrag 
@@ -94,6 +114,7 @@ class KasseController < ApplicationController
         if (!unterteile.empty?)  
     	 
     		subParts.each do |t| 
+                require "debugger"; debugger 
     			bedarf = createDemand(t, datum ) 
 
                 puts "--------"
@@ -110,8 +131,16 @@ class KasseController < ApplicationController
                   :AuDatum => (auftrag.Datum) ,
                    :BeDatum => (bedarf.Datum) })
 
-	    		bedarfsAbleitung.save
+                if !(Bedarfsableitung.exists?( {
+                    :AuTNr => (auftrag.TNr) , 
+                    :BeTNr => (bedarf.TNr) ,
+                    :AuDatum => (auftrag.Datum) ,
+                    :BeDatum => (bedarf.Datum)
+                     }) 
+                    ) 
 
+	    		bedarfsAbleitung.save
+                end 
     		end	
 
         else return;     
