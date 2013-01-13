@@ -44,24 +44,35 @@ class KasseController < ApplicationController
     	productsOfOrder.each do |produkt|
     	
    
-    	createDemand(produkt,orderDatum + eINE_WOCHE_SPAETER)
+    	createDemand(produkt,orderDatum + eINE_WOCHE_SPAETER,1) # es werden n Teile am Datum benötigt, startwert ist 1. 
 
     	# fulfillDemand(bedarf,orderDatum + EINE_WOCHE_SPAETER)
     	end 
     end	
 
-    def createDemand(teil,datum)
-
+    def createDemand(teil,datum,anzahlTeile)
 
        
-            bedarf = Bedarf.new({:TNr => teil.id , :Datum => datum }) #losbildung für Aufträge mit selbem lieferdatum
-             if !(Bedarf.exists?(:TNr => teil.id , :Datum => datum ) ) # wenn schon ein auftrag dafür existiert, dann braucht man keinen mehr. 
+            bedarf = Bedarf.new({:TNr => teil.id , :Datum => datum , :anzahl => anzahlTeile }) #losbildung für Aufträge mit selbem lieferdatum
+
+             if !(Bedarf.exists?({:TNr => teil.id , :Datum => datum } ) ) # wenn schon ein auftrag dafür existiert, dann braucht man keinen mehr. 
+               
                bedarf.save  
+             else   
+                bedarfAbfrage =   Bedarf.where({:TNr => teil.id , :Datum => datum })
+                #assert bedarfAbfrage.size == 1
+                bedarf = bedarfAbfrage[0] 
+                bedarfAnzahl = bedarf.anzahl + anzahlTeile #neue teile hinzurechnen
+                updateStatement = "UPDATE bedarfs SET anzahl = #{ bedarfAnzahl } 
+                                   WHERE TNr = #{bedarf.TNr} AND Datum = #{bedarf.Datum}  
+                                   "
+
+               Bedarf.connection.update_sql(updateStatement)
              end
 
     	
 
-    	fulfillDemand(bedarf,datum)
+    	fulfillDemand(bedarf,datum,anzahlTeile)
 
         bedarf ## Der Bedarf soll zurückkommen und ob die BedarfsDeckung erfolgreich gespeichert wurde! 
 
@@ -69,8 +80,8 @@ class KasseController < ApplicationController
     end 	
 
     #Trägt Bedarfsdeckungen für teil an einem datum  ein. 
-    def fulfillDemand(bedarf, datum)
-    	auftrag = erstelleAuftrag(bedarf,datum)
+    def fulfillDemand(bedarf, datum,anzahlTeile)
+    	auftrag = erstelleAuftrag(bedarf,datum,anzahlTeile)
     	
     	bedarfsDeckung = Bedarfsdeckung.new({ AuTNr:(auftrag.TNr) , BeTNr:(bedarf.TNr) , AuDatum:(auftrag.Datum) , BeDatum:(bedarf.Datum) })
     	    if !(Bedarfsdeckung.exists?( {
@@ -86,22 +97,37 @@ class KasseController < ApplicationController
 
     end	
 
-    def erstelleAuftrag(auftrag,datum) #ist der parameter auftrag hier wirklich ein auftrag? 
+    def erstelleAuftrag(auftrag,datum,anzahlTeile) #ist der parameter auftrag hier wirklich ein auftrag? 
 
-    	auftrag = Auftrag.new({:TNr => auftrag.TNr, :Datum => datum}) 
+    	auftrag = Auftrag.new({:TNr => auftrag.TNr, :Datum => datum, :anzahl => anzahlTeile}) 
         if !(Auftrag.exists?({:TNr =>  auftrag.TNr , :Datum => datum }))
-    	auftrag.save
+    	    
+               auftrag.save  
+            else   
+                auftragAbfrage =   Auftrag.where({:TNr => auftrag.id , :Datum => datum } )
+                #assert bedarfAbfrage.size == 1
+                auftrag = auftragAbfrage[0] 
+                auftragAnzahl = auftrag.anzahl + anzahlTeile #neue teile hinzurechnen
+                
+
+                ## wieso kommt hier ein NIL vor ? 
+                 updateStatement = "UPDATE auftrags SET anzahl = #{ auftragAnzahl } 
+                                   WHERE TNr = #{auftrag.TNr} AND Datum = #{auftrag.Datum}  
+                                   "
+
+               Auftrag.connection.update_sql(updateStatement)
         end 
-    	leiteBedarfeAb(auftrag,datum - 1 ) # Jetzt kommt die Vorlaufsverschiebung rein, beim ableiten von Bedarfen! 
+    	leiteBedarfeAb(auftrag,datum - 1 ,anzahlTeile) # Jetzt kommt die Vorlaufsverschiebung rein, beim ableiten von Bedarfen! 
 
     	auftrag 
     end 	
 
-    def leiteBedarfeAb(auftrag, datum) 
+    def leiteBedarfeAb(auftrag, datum,anzahlTeile) 
 
 
 
-    	unterteile = PartsConsistsOfParts.where(:oberteilID => auftrag.TNr) # Erst die Abfrage
+    	unterteile = PartsConsistsOfParts.where({:oberteilID => auftrag.TNr}) # Erst die Abfrage
+        
 
         subParts = unterteile.reduce ([]) {|accu,elem| accu + [Parts.find(elem.unterteilID)] }
 
@@ -114,8 +140,11 @@ class KasseController < ApplicationController
         if (!unterteile.empty?)  
     	 
     		subParts.each do |t| 
-                require "debugger"; debugger 
-    			bedarf = createDemand(t, datum ) 
+                require "debugger"; debugger
+
+                anzahlTeileDesUnterteils = PartsConsistsOfParts.where({:oberteilID => auftrag.TNr , :unterteilID => t.id})[0].menge
+
+    			bedarf = createDemand(t, datum , anzahlTeileDesUnterteils) 
 
                 puts "--------"
                 puts "auftragTNr:"
