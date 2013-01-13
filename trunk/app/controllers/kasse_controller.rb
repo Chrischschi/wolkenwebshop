@@ -104,7 +104,7 @@ class KasseController < ApplicationController
     	    
                auftrag.save  
             else   
-                auftragAbfrage =   Auftrag.where({:TNr => auftrag.id , :Datum => datum } )
+                auftragAbfrage =   Auftrag.where({:TNr => auftrag.TNr , :Datum => datum } )
                 #assert bedarfAbfrage.size == 1
                 auftrag = auftragAbfrage[0] 
                 auftragAnzahl = auftrag.anzahl + anzahlTeile #neue teile hinzurechnen
