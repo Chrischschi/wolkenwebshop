@@ -68,6 +68,8 @@ class KasseController < ApplicationController
                                    "
 
                Bedarf.connection.update_sql(updateStatement)
+               Bedarf.connection.close
+               Bedarf.clear_active_connections!
              end
 
     	
@@ -116,6 +118,8 @@ class KasseController < ApplicationController
                                    "
 
                Auftrag.connection.update_sql(updateStatement)
+               Auftrag.connection.close
+               Auftrag.clear_active_connections!
         end 
     	leiteBedarfeAb(auftrag,datum - 1 ,anzahlTeile) # Jetzt kommt die Vorlaufsverschiebung rein, beim ableiten von Bedarfen! 
 
