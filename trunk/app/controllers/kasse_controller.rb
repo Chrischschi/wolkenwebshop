@@ -36,7 +36,7 @@ class KasseController < ApplicationController
   end
   	#Trägt bestellung in Auftragsverfolgung ein
     def trackOrder(order,productsOfOrder)
-        require 'debugger' ; debugger
+      
 
     	eINE_WOCHE_SPAETER = 7 # einfach  Date + 7
     	orderDatum = order.datum
@@ -63,8 +63,8 @@ class KasseController < ApplicationController
                 #assert bedarfAbfrage.size == 1
                 bedarf = bedarfAbfrage[0] 
                 bedarfAnzahl = bedarf.anzahl + anzahlTeile #neue teile hinzurechnen
-                updateStatement = "UPDATE bedarfs SET anzahl = #{ bedarfAnzahl } 
-                                   WHERE TNr = #{bedarf.TNr} AND Datum = #{bedarf.Datum}  
+                updateStatement = "UPDATE \"bedarfs\" SET \"anzahl\" = #{ bedarfAnzahl } 
+                                   WHERE \"bedarfs\".\"TNr\" = #{bedarf.TNr} AND \"bedarfs\".\"Datum\" = #{bedarf.Datum}  
                                    "
 
                Bedarf.connection.update_sql(updateStatement)
@@ -113,8 +113,8 @@ class KasseController < ApplicationController
                 
 
                 ## wieso kommt hier ein NIL vor ? 
-                 updateStatement = "UPDATE auftrags SET anzahl = #{ auftragAnzahl } 
-                                   WHERE TNr = #{auftrag.TNr} AND Datum = #{auftrag.Datum}  
+                 updateStatement = "UPDATE \"auftrags\" SET \"anzahl\" = #{ auftragAnzahl } 
+                                   WHERE \"auftrags\".\"TNr\" = #{auftrag.TNr} AND \"auftrags\".\"Datum\" = #{auftrag.Datum}  
                                    "
 
                Auftrag.connection.update_sql(updateStatement)
@@ -135,25 +135,25 @@ class KasseController < ApplicationController
 
         subParts = unterteile.reduce ([]) {|accu,elem| accu + [Parts.find(elem.unterteilID)] }
 
-        puts "------------"
-        puts "SubParts:"
-        subParts.each  {|x| puts x.name  }
-        puts "------------"
+       # puts "------------"
+      #  puts "SubParts:"
+      #  subParts.each  {|x| puts x.name  }
+       # puts "------------"
 
     	
         if (!unterteile.empty?)  
     	 
     		subParts.each do |t| 
-                require "debugger"; debugger
+               
 
                 anzahlTeileDesUnterteils = PartsConsistsOfParts.where({:oberteilID => auftrag.TNr , :unterteilID => t.id})[0].menge
 
     			bedarf = createDemand(t, datum , anzahlTeileDesUnterteils) 
 
-                puts "--------"
-                puts "auftragTNr:"
-                puts auftrag.TNr 
-                puts "--------"
+              #  puts "--------"
+              #  puts "auftragTNr:"
+              #  puts auftrag.TNr 
+              #  puts "--------"
 
                 
 

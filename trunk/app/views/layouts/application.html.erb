@@ -11,9 +11,9 @@
 	<br>
 
 	<ul id="Navigation">
-		<li><%= link_to 'Startseite', "http://localhost:3000/"%></li>
+		<li><%= link_to 'Startseite', root_path %></li>
 		<li><%= link_to 'Produkt-Katalog', "/produkt_katalog/index"%></li>
-		<li><%= link_to 'Benutzer-Seite', "http://localhost:3000/user/index"%></li> 
+		<li><%= link_to 'Benutzer-Seite', "/user/index"%></li> 
 	</ul>
 	
 	<div id="Warenkorb">
@@ -41,7 +41,7 @@
 		Summe: <%= sum  %> €  
 		<br>
 		<br>
-		<%= link_to 'Zur Kasse', "http://localhost:3000/kasse/index"%>
+		<%= link_to 'Zur Kasse', "/kasse/index"%>
 	</div>
 
 
