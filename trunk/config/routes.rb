@@ -25,6 +25,8 @@ WolkenWebShop::Application.routes.draw do
   #	12.12.2012
   post "produkt_katalog/delete"
    	
+  # 15.01.2013 
+  get "user/auftragsverfolgung"
 
   root :to => "home#index"
 

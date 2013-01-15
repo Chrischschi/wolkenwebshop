@@ -37,7 +37,14 @@ class UserController < ApplicationController
 	  @e_stueckliste = 	stueckliste_aufloesen(id)
 	end
 
-	#private
+	def auftragsverfolgung
+			@auftraege = Auftrag.all
+			@bedarfe = Bedarf.all 
+			@ableitungen = Bedarfsableitung.all
+			@deckungen = Bedarfsdeckung.all 
+
+    end 
+	private
 
 	def stueckliste_aufloesen(teilID)
 		result = {} 
@@ -67,21 +74,12 @@ class UserController < ApplicationController
 			result.merge(subparts_structure) 
 			
 		end
-		
-		
-		
 
+		#15.1.2013: Auftragsverfolgung hinzufügen 
 
+		
+		
 	end  
-
-	def st(teilID)
-	 stueckliste_aufloesen(teilID)
-	end	
-		
-		
-	 
-	
-
 
 
 end
