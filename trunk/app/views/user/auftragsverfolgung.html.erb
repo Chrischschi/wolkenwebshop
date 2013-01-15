@@ -1,0 +1,76 @@
+<html>
+<body> 
+	<div id="Inhalt">
+		<h2>Auftragsverfolgung</h2>
+		<br>
+		<h3>Auftraege</h3>
+		<br>
+		<table border = 1> 
+			<tr> 
+				<th> ArtikelNr. </th> <th> Datum </th> <th> Anzahl </th> 
+			</tr> 
+			<%  @auftraege.each do |anzeigen|  %> 
+				<tr>
+					<td><%= "#{anzeigen.TNr}" %></td>
+					<td><%= "#{anzeigen.Datum.to_date}"%></td>
+					<td><%= "#{anzeigen.anzahl}"%></td>
+				</tr>
+			<% end %> 
+		</table>
+		<br>
+		<br>
+		<br>
+		<h3>Bedarfe</h3>
+		<br>
+		<table border = 1> 
+			<tr> 
+				<th> ArtikelNr. </th> <th> Datum </th> <th> Anzahl </th> 
+			</tr> 
+			<%  @bedarfe.each do |anzeigen|  %> 
+				<tr>
+					<td><%= "#{anzeigen.TNr}" %></td>
+					<td><%= "#{anzeigen.Datum.to_date}"%></td>
+					<td><%= "#{anzeigen.anzahl}"%></td>
+				</tr>
+			<% end %> 
+		</table>
+		<br>
+		<br>
+		<br>
+		<h3>Bedarfsableitunen</h3>
+		<br>
+		<table border = 1> 
+			<tr> 
+				<th> AuftragsNr. </th> <th> BedarfsNr. </th> <th> Auftragsdatum </th> <th> Bedarfsdatum </th> 
+			</tr> 
+			<%  @ableitungen.each do |anzeigen|  %> 
+				<tr>
+					<td><%= "#{anzeigen.AuTNr}" %></td>
+					<td><%= "#{anzeigen.BeTNr}"%></td>
+					<td><%= "#{anzeigen.AuDatum.to_date}"%></td>
+					<td><%= "#{anzeigen.BeDatum.to_date}"%></td>
+				</tr>
+			<% end %> 
+		</table>
+		<br>
+		<br>
+		<br>
+		<h3>Bedarfsdeckungen</h3>
+		<br>
+		<table border = 1> 
+			<tr> 
+				<th> AuftragsNr. </th> <th> BedarfsNr. </th> <th> Auftragsdatum </th> <th> Bedarfsdatum </th> 
+			</tr>
+			<%  @deckungen.each do |anzeigen|  %> 
+				<tr>
+					<td><%= "#{anzeigen.AuTNr}" %></td>
+					<td><%= "#{anzeigen.BeTNr}"%></td>
+					<td><%= "#{anzeigen.AuDatum.to_date}"%></td>
+					<td><%= "#{anzeigen.BeDatum.to_date}"%></td>
+				</tr>
+			<% end %> 
+		</table>
+	</div>
+</body> 
+
+</html> 
