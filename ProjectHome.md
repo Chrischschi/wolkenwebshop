@@ -1,0 +1,1 @@
+BWL2-Praktikum: Ein Webshop für Wolken in Ruby on Rails
